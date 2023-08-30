@@ -137,12 +137,21 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 768px) {
   header {
     background-color: #ff385c;
+    padding:20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  header nav ul {
+    flex-direction: row;
+  }
+  
+  header nav ul li {
+    margin: 0;
   }
 
   header nav {
@@ -151,6 +160,16 @@ footer p {
 
   form {
     flex-direction: row;
+  }
+
+  form label,
+  form select,
+  form input {
+    margin: 0;
+  }
+
+  form button {
+    width: auto;
   }
 
   .group {
@@ -186,4 +205,12 @@ footer p {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  header {
+    display: block!important;
+}
 
+form {
+    display: block!important;
+}
+}
